@@ -36,7 +36,7 @@ function result() {
     let xItem = randomValueFromArray(insertX);
     let yItem = randomValueFromArray(insertY);
     let zItem = randomValueFromArray(insertZ);
-    let wItem = Math.floor(Math.random() * 100) + 100;
+    let wItem = Math.floor(Math.random() * 300) + 100;
     newStory= newStory.replaceAll(':insertx:', xItem);      //changed replace to replace all instances of substring
     newStory= newStory.replaceAll(':inserty:', yItem);
     newStory= newStory.replaceAll(':insertz:', zItem);
