@@ -35,9 +35,9 @@ function result() {
     let xItem = randomValueFromArray(insertX);
     let yItem = randomValueFromArray(insertY);
     let zItem = randomValueFromArray(insertZ);
-    newStory= newStory.replace(':insertx:', xItem);
-    newStory= newStory.replace(':inserty:', yItem);
-    newStory= newStory.replace(':insertz:', zItem);
+    newStory= newStory.replaceAll(':insertx:', xItem);      //changed replace to replace all instances of substring
+    newStory= newStory.replaceAll(':inserty:', yItem);
+    newStory= newStory.replaceAll(':insertz:', zItem);
 
 
   if(customName.value !== '') {
@@ -46,9 +46,10 @@ function result() {
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round((3000 * .0714286),stones);               //1 pound = 0.0714286 stones
-    const temperature =  Math.round((94 - 32) * 5/9,centigrade);       //°C = (°F - 32) * 5/9
-
+    const weight = Math.round(300 * .0714286);               //1 pound = 0.0714286 stones
+    const temperature =  Math.round((94 - 32) * 5/9);       //°C = (°F - 32) * 5/9
+    newStory = newStory.replace("94 fahrenheit", temperature + " stones");
+    newStory = newStory.replace("300 pounds", weight + " centigrade");
   }
 
   story.textContent = newStory;
