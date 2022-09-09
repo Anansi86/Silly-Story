@@ -46,8 +46,8 @@ function result() {
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature =  Math.round(94);
+    const weight = Math.round((3000 * .0714286),stones);               //1 pound = 0.0714286 stones
+    const temperature =  Math.round((94 - 32) * 5/9,centigrade);       //°C = (°F - 32) * 5/9
 
   }
 
