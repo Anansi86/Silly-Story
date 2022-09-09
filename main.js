@@ -48,8 +48,8 @@ function result() {
   if(document.getElementById("uk").checked) {
     const weight = Math.round(300 * .0714286);               //1 pound = 0.0714286 stones
     const temperature =  Math.round((94 - 32) * 5/9);       //°C = (°F - 32) * 5/9
-    newStory = newStory.replace("94 fahrenheit", temperature + " stones");
-    newStory = newStory.replace("300 pounds", weight + " centigrade");
+    newStory = newStory.replace("94 fahrenheit", temperature + " centigrade");
+    newStory = newStory.replace("300 pounds", weight + " stones");
   }
 
   story.textContent = newStory;
